@@ -9,10 +9,10 @@
  * Requires PHP:      5.6
  * Tested up to:      6.6.1
  * Stable tag:        1.5.1
- * Author:            Michael Revellin-Clerc
+ * Author:            M . Code
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Contributors:      Michael Revellin-Clerc
+ * Contributors:      M . Code
  * Donate link:       https://ko-fi.com/devloper
  */
 
