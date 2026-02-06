@@ -1,25 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
-	let adminBar = document.querySelector('#wpadminbar');
-	let html = document.querySelector('html');
-	let body = document.body;
+	const adminBar = document.querySelector('#wpadminbar');
+	const html = document.querySelector('html');
+	const body = document.body;
 
 	/**
 	 * Return if condition not met
 	 */
-	if (adminBar === null) { return; }
+	if (adminBar === null) {
+		return;
+	}
 
 	/**
 	 * Add class for compatibility
 	 */
 	adminBar.classList.add('bottom-admin-toolbar');
-	let adminBarHeight = adminBar.clientHeight + 'px';
+	const adminBarHeight = adminBar.clientHeight + 'px';
 	adminBar.style.setProperty("--bab-data-height", adminBarHeight, "");
-
 
 	/**
 	 * Add class on backend
 	 */
-	if (body.classList.contains('wp-admin')){
+	if (body.classList.contains('wp-admin')) {
 		html.classList.add('bottom-admin-toolbar');
 	}
 
@@ -27,23 +28,20 @@ document.addEventListener('DOMContentLoaded', function () {
 	 * Listen keyboard keydown press
 	 */
 	document.addEventListener('keydown', function (event) {
-		let shiftKey = event.shiftKey;
-		let eventKey = event.which;
-		let arrowDownKey = 40;
-		if (shiftKey && eventKey === arrowDownKey) {
+		if (event.shiftKey && event.key === 'ArrowDown') {
+			event.preventDefault();
 			adminBar.classList.toggle('is-hidden');
 		}
-	})
+	});
 
 	/**
-	 * Fix tinyMCE bug
+	 * Fix tinyMCE bug - reset bar position when TinyMCE initializes
 	 */
-	function resetBar() {
-		adminBar.css('top', 0);
-	}
-	if (typeof (tinyMCE) !== 'undefined') {
-		tinyMCE.init({
-			oninit: resetBar()
+	if (typeof tinyMCE !== 'undefined' && tinyMCE.on) {
+		tinyMCE.on('AddEditor', function () {
+			// Reset admin bar to top when TinyMCE editor is added
+			adminBar.style.top = '0';
+			adminBar.style.bottom = 'auto';
 		});
 	}
-})
+});

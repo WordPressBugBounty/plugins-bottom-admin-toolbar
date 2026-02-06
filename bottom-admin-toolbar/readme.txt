@@ -1,15 +1,15 @@
 === Bottom Admin Toolbar ===
 Contributors: devloper00
 Donate link: https://ko-fi.com/devloper
-Tags: admin, bar, adminbar, bottom bar, toolbar, wordpress, bottom
+Tags: admin, bar, adminbar, bottom bar, toolbar
 Requires at least: 4.9 or higher
-Tested up to: 6.6.1
+Tested up to: 6.9
 Requires PHP: 5.6
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Natively WordPress doesn't offer the possibility to change your admin bar position. With that simple extension you can stick it at the bottom forever and hide it by pressing shortcut!
+Stick the WordPress admin bar to the bottom of the screen. Hide it with SHIFT + Down Arrow keyboard shortcut.
 
 == Description ==
 
@@ -38,6 +38,14 @@ For example when you develop a website which has a sticky header
 1. Bottom Admin Toolbar in action
 
 == Changelog ==
+
+= 1.5.2 =
+* Code optimization and performance improvements
+* Add proper sanitization callback for settings
+* Fix JavaScript: Replace deprecated event.which with modern event.key
+* Fix TinyMCE integration bug (incorrect jQuery syntax)
+* Improve code structure and maintainability
+* Add version constant for consistent asset versioning
 
 = 1.5.1 =
 * Use dynamic bar height if bigger than default size
