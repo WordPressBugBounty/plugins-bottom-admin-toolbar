@@ -1,11 +1,10 @@
 === Bottom Admin Toolbar ===
 Contributors: devloper00
-Donate link: https://ko-fi.com/devloper
 Tags: admin, bar, adminbar, bottom bar, toolbar
 Requires at least: 4.9 or higher
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 5.6
-Stable tag: 1.5.2
+Stable tag: 1.5.3
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +37,11 @@ For example when you develop a website which has a sticky header
 1. Bottom Admin Toolbar in action
 
 == Changelog ==
+
+= 1.5.3 =
+* Moved add_theme_support to after_setup_theme for reliability
+* Fixed settings_errors group slug on settings page
+* Tested up to WordPress 7.0
 
 = 1.5.2 =
 * Code optimization and performance improvements
