@@ -4,7 +4,7 @@ Tags: admin, bar, adminbar, bottom bar, toolbar
 Requires at least: 4.9 or higher
 Tested up to: 7.0
 Requires PHP: 5.6
-Stable tag: 1.5.3
+Stable tag: 1.5.4
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 

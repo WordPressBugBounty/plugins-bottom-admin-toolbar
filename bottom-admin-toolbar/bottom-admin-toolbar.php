@@ -3,7 +3,7 @@
  * Plugin Name:       Bottom Admin Toolbar
  * Plugin URI:        https://wordpress.org/plugins/bottom-admin-toolbar/
  * Description:       Stick the WordPress admin bar to the bottom of the screen and hide it with a keyboard shortcut.
- * Version:           1.5.3
+ * Version:           1.5.4
  * Requires at least: 4.9 or higher
  * Requires PHP:      5.6
  * Tested up to:      7.0
@@ -23,7 +23,7 @@ if ( ! class_exists( 'BottomAdminToolbar' ) ) :
 		 *
 		 * @var string
 		 */
-		const VERSION = '1.5.3';
+		const VERSION = '1.5.4';
 
 		/**
 		 * Constructor
@@ -41,9 +41,6 @@ if ( ! class_exists( 'BottomAdminToolbar' ) ) :
 				add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_files' ) );
 			}
 
-			if ( is_admin() ) {
-				require BAB_PATH . 'includes/class-locahl-banner.php';
-			}
 		}
 
 		/**
